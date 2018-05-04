@@ -5,6 +5,21 @@ steps:
   env:
     MyName: $(Agent.MachineName)
 
+- task: Docker@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    imageName: 'uw-it-helloworld'
+    qualifyImageName: false
+    includeLatestTag: true
+
+- task: Docker@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    action: 'Push an image'
+    imageName: 'uw-it-helloworld'
+    qualifyImageName: false
+    includeLatestTag: true
+
 # - task: Docker@0
 #   inputs:
 #     azureSubscription: AzureTestContainerRegistry
