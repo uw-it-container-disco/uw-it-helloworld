@@ -18,6 +18,7 @@ steps:
     dockerRegistryConnection: 'Docker Hub lavielp'
     action: 'Push an image'
     imageName: 'lavielp/uw-it-helloworld'
+    qualifyImageName: false
     includeLatestTag: true
 
 # - task: Docker@0
