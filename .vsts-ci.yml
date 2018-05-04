@@ -17,7 +17,7 @@ steps:
     containerregistrytype: 'Container Registry'
     dockerRegistryConnection: 'Docker Hub lavielp'
     action: 'Push an image'
-    imageName: 'uw-it-helloworld'
+    imageName: 'lavielp/uw-it-helloworld'
     includeLatestTag: true
 
 # - task: Docker@0
