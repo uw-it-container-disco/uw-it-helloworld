@@ -8,7 +8,7 @@ steps:
 - task: Docker@0
   inputs:
     containerregistrytype: 'Container Registry'
-    imageName: 'uw-it-helloworld'
+    imageName: 'lavielp/uw-it-helloworld'
     qualifyImageName: false
     includeLatestTag: true
 
