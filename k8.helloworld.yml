@@ -35,15 +35,16 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: helloworld
-  # labels:
-  #   app: howtoapp
+  labels:
+    app: howtoapp
 spec:
   replicas: 2
   template:
-    metadata:
-      labels:
-        # name: helloworld
-        app: howtoapp
+    name: helloworld
+    # metadata:
+    #   labels:
+    #     name: helloworld
+    #     app: howtoapp
     spec:
       containers:
       - name: helloworld
