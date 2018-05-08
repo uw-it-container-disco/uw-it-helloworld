@@ -22,24 +22,8 @@ steps:
     qualifyImageName: false
     includeLatestTag: true
 
-# - task: Docker@0
-#   inputs:
-#     azureSubscription: AzureTestContainerRegistry
-#     azureContainerRegistry: '{"loginServer":"winengtestcontainerregistry.azurecr.io", "id" : "/subscriptions/c6bb57af-5362-4ded-aaff-2ed354f99faa/resourceGroups/TestContainers/providers/Microsoft.ContainerRegistry/registries/WinEngTestContainerRegistry"}'
-#     dockerFile: Dockerfile
-#     imageName: 'winengtestcontainerregistry.azurecr.io/howto'
-#     includeLatestTag: true
-
-# - task: Docker@0
-#   inputs:
-#     azureSubscription: AzureTestContainerRegistry
-#     azureContainerRegistry: '{"loginServer":"winengtestcontainerregistry.azurecr.io", "id" : "/subscriptions/c6bb57af-5362-4ded-aaff-2ed354f99faa/resourceGroups/TestContainers/providers/Microsoft.ContainerRegistry/registries/WinEngTestContainerRegistry"}'
-#     action: 'Push an image'
-#     imageName: 'winengtestcontainerregistry.azurecr.io/howto'
-#     includeLatestTag: true
-
-# - task: Kubernetes@0
-#   inputs:
-#     kubernetesServiceConnection: AKS
-#     useConfigurationFile: true
-#     configuration: k8.howto.yml
+- task: Kubernetes@0
+  inputs:
+    kubernetesServiceConnection: 'ACS Kubernetes Windows'
+    useConfigurationFile: true
+    configuration: k8.helloworld.yml
