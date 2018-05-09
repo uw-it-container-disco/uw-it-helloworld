@@ -1,3 +1,3 @@
-FROM microsoft/iis:windowsservercore-1709
+FROM microsoft/aspnet
 
 COPY ./html c:/inetpub/wwwroot
