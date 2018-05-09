@@ -25,6 +25,6 @@ steps:
 
 - task: Kubernetes@0
   inputs:
-    kubernetesServiceConnection: 'ACS Kubernetes Windows'
+    kubernetesServiceConnection: 'ACS Kubernetes Down Level'
     useConfigurationFile: true
     configuration: k8.helloworld.yml
