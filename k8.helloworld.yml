@@ -12,49 +12,49 @@ spec:
   selector:
     app: howtoapp
     # run: helloworld
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: helloworld
-  labels:
-    app: howtoapp
-spec:
-  containers:
-  - name: helloworld
-    image: lavielp/uw-it-helloworld:latest
-    imagePullPolicy: Always
-    ports: 
-    - containerPort: 80
-  imagePullSecrets:
-  - name: acr-auth
-  nodeSelector:
-    beta.kubernetes.io/os: windows
 # ---
-# apiVersion: apps/v1beta2
-# kind: Deployment
+# apiVersion: v1
+# kind: Pod
 # metadata:
 #   name: helloworld
 #   labels:
 #     app: howtoapp
 # spec:
-#   replicas: 2
-#   selector: 
-#     matchLabels: 
-#       app: howtoapp
-#   template:
-#     metadata:
-#       labels:
-#         name: helloworld
-#         app: howtoapp
-#     spec:
-#       containers:
-#       - name: helloworld
-#         image: lavielp/uw-it-helloworld:latest
-#         imagePullPolicy: Always
-#         ports:
-#         - containerPort: 80
-#       imagePullSecrets:
-#       - name: dh-auth
-#       nodeSelector:
-#         beta.kubernetes.io/os: windows
+#   containers:
+#   - name: helloworld
+#     image: lavielp/uw-it-helloworld:latest
+#     imagePullPolicy: Always
+#     ports: 
+#     - containerPort: 80
+#   imagePullSecrets:
+#   - name: acr-auth
+#   nodeSelector:
+#     beta.kubernetes.io/os: windows
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld
+  labels:
+    app: howtoapp
+spec:
+  replicas: 2
+  selector: 
+    matchLabels: 
+      app: howtoapp
+  template:
+    metadata:
+      labels:
+        name: helloworld
+        app: howtoapp
+    spec:
+      containers:
+      - name: helloworld
+        image: lavielp/uw-it-helloworld:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: dh-auth
+      nodeSelector:
+        beta.kubernetes.io/os: windows
