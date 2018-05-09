@@ -3,6 +3,7 @@ steps:
     echo hello beautiful world! %MyName%
     echo verifying a change
     echo Agent.HomeDirectory is %CD%
+    ver
   env:
     MyName: $(Agent.MachineName)
 
