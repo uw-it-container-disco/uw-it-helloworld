@@ -55,11 +55,11 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: lavielp/uw-it-helloworld:latest
+        image: lavielp/uw-it-helloworld
         imagePullPolicy: Always
+        command: [ "echo", "SUCCESS" ]
         ports:
         - containerPort: 80
-        - containerPort: 443
       imagePullSecrets:
       - name: dh-auth
       nodeSelector:
