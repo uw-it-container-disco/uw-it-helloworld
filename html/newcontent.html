@@ -1,19 +1,8 @@
 <html>
     <header><title>Rolling Updates</title></header>
     <body>
-        <h1>Changes made to effect rolling updates</h1>
-        The Kubernetes config file needs:
-           The container to have imagePullPolicy: Always
-           The deployment spec section to have a strategy secion, i.e.
-        strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-  minReadySeconds: 5
-            The docker build and push to be tagged with the build number
-            lavielp/uw-it-helloworld:$(Build.BuildId)
-        A kubernetes set image task (this can go in a release task), i.e.
-           image deployment/helloworld helloworld=lavielp/uw-it-helloworld:$(Build.BuildId) --record
+        <h1>Rolling Updates, Continuous Delivery</h1>
+        When we're 10...
+        Look mom, no hands!
     </body>
 </html>
