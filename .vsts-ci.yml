@@ -28,3 +28,9 @@ steps:
     kubernetesServiceConnection: 'ACS Kubernetes Down Level'
     useConfigurationFile: true
     configuration: k8.helloworld.yml
+
+- task: Kubernetes@0
+  inputs:
+    kubernetesServiceConnection: 'ACS Kubernetes Down Level'
+    command: set
+    arguments: 'image deployment/helloworld helloworld=lavielp/uw-it-helloworld:$(Build.BuildId) --record'
