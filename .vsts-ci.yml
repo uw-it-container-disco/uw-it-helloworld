@@ -10,7 +10,7 @@ steps:
 - task: Docker@0
   inputs:
     containerregistrytype: 'Container Registry'
-    imageName: 'lavielp/uw-it-helloworld'
+    imageName: 'lavielp/uw-it-helloworld:$(Build.BuildId)'
     qualifyImageName: false
     includeLatestTag: true
 
@@ -19,7 +19,7 @@ steps:
     containerregistrytype: 'Container Registry'
     dockerRegistryConnection: 'Docker Hub lavielp'
     action: 'Push an image'
-    imageName: 'lavielp/uw-it-helloworld'
+    imageName: 'lavielp/uw-it-helloworld:$(Build.BuildId)'
     qualifyImageName: false
     includeLatestTag: true
 
