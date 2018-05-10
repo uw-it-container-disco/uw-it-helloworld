@@ -57,7 +57,6 @@ spec:
       - name: helloworld
         image: lavielp/uw-it-helloworld
         imagePullPolicy: Always
-        command: [ "echo", "SUCCESS" ]
         ports:
         - containerPort: 80
       imagePullSecrets:
