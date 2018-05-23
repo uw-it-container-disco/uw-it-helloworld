@@ -1,7 +1,7 @@
 steps:
 - script: | 
     echo hello beautiful world! %MyName%
-    echo verifying a change
+    echo verifying a change with touch
     echo Agent.HomeDirectory is %CD%
     ver
   env:
