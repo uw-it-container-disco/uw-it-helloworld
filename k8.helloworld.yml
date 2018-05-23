@@ -11,25 +11,6 @@ spec:
     protocol: TCP
   selector:
     app: howtoapp
-    # run: helloworld
-# ---
-# apiVersion: v1
-# kind: Pod
-# metadata:
-#   name: helloworld
-#   labels:
-#     app: howtoapp
-# spec:
-#   containers:
-#   - name: helloworld
-#     image: lavielp/uw-it-helloworld:latest
-#     imagePullPolicy: Always
-#     ports: 
-#     - containerPort: 80
-#   imagePullSecrets:
-#   - name: acr-auth
-#   nodeSelector:
-#     beta.kubernetes.io/os: windows
 ---
 apiVersion: apps/v1beta1
 kind: Deployment
